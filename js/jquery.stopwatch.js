@@ -12,12 +12,12 @@
 		clock.append('<input type="button" class="reset" value="Reset" />');
 		
 		// We have to do some searching, so we'll do it here, so we only have to do it once.
-		var h = clock.find('.hr');
-		var m = clock.find('.min');
-		var s = clock.find('.sec');
-		var start = clock.find('.start');
-		var stop = clock.find('.stop');
-		var reset = clock.find('.reset')
+		var h = clock.first('.hr');
+		var m = clock.first('.min');
+		var s = clock.first('.sec');
+		var start = clock.first('.start');
+		var stop = clock.first('.stop');
+		var reset = clock.first('.reset')
 		
 		stop.hide();
 
