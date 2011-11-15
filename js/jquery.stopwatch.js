@@ -17,7 +17,7 @@
 		var s = clock.first('.sec');
 		var start = clock.first('.start');
 		var stop = clock.first('.stop');
-		var reset = clock.first('.reset')
+		var reset = clock.first('.reset');
 		
 		stop.hide();
 
