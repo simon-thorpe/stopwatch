@@ -13,12 +13,18 @@
       font-family:helvetica, arial, sans-serif;
       padding:40px;
     }
+    .log {
+      margin-top:10px;
+      color:#bbb;
+      font-size:12px;
+    }
   </style>
 </head>
 <body>
 
   <h3>Theme 1</h3>
   <div id="stopwatch-1"></div>
+  <div class="log"></div>
   <br>
   <h3>Theme 2</h3>
   <div id="stopwatch-2"></div>
@@ -49,16 +55,22 @@
 
   <script type="text/javascript">
     $(function() {
-      $('#stopwatch-1').stopwatch({theme: 'theme-1'});
-      $('#stopwatch-2').stopwatch({theme: 'theme-2'});
-      $('#stopwatch-3').stopwatch({theme: 'theme-3'});
-      $('#stopwatch-4').stopwatch({theme: 'theme-4'});
-      $('#stopwatch-5').stopwatch({theme: 'theme-5'});
-      $('#stopwatch-6').stopwatch({theme: 'theme-6'});
-      $('#stopwatch-7').stopwatch({theme: 'theme-7'});
-      $('#stopwatch-8').stopwatch({theme: 'theme-8'});
-      $('#stopwatch-9').stopwatch({theme: 'theme-9'});
-      $('#stopwatch-10').stopwatch({theme: 'theme-10'});
+      $('#stopwatch-1').stopwatch({
+        theme: 'theme-1',
+        persistKey: 'timer1',
+        start: function(o) { o.next().append($('<div/>').text('start')); },
+        stop: function(o) { o.next().append($('<div/>').text('stop')); },
+        reset: function(o) { o.next().append($('<div/>').text('reset')); },
+      });
+      $('#stopwatch-2').stopwatch({theme: 'theme-2', persistKey: 'timer2'});
+      $('#stopwatch-3').stopwatch({theme: 'theme-3', persistKey: 'timer3'});
+      $('#stopwatch-4').stopwatch({theme: 'theme-4', persistKey: 'timer4'});
+      $('#stopwatch-5').stopwatch({theme: 'theme-5', persistKey: 'timer5'});
+      $('#stopwatch-6').stopwatch({theme: 'theme-6', persistKey: 'timer6'});
+      $('#stopwatch-7').stopwatch({theme: 'theme-7', persistKey: 'timer7'});
+      $('#stopwatch-8').stopwatch({theme: 'theme-8', persistKey: 'timer8'});
+      $('#stopwatch-9').stopwatch({theme: 'theme-9', persistKey: 'timer9'});
+      $('#stopwatch-10').stopwatch({theme: 'theme-10', persistKey: 'timer10'});
     });
   </script>
 </body>
