@@ -1,7 +1,10 @@
 (function($) {
-  $.fn.stopwatch = function(theme) {
+  $.fn.stopwatch = function(o) {
+    o = jQuery.extend({
+      theme: null,
+    }, o);
     var stopwatch = $(this);
-    stopwatch.addClass('stopwatch').addClass(theme);
+    stopwatch.addClass('stopwatch').addClass(o.theme);
 
     stopwatch.each(function() {
       var instance = $(this);
